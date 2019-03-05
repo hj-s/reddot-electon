@@ -14,11 +14,11 @@ function getInstallerConfig () {
 	const outPath = path.join(rootPath, 'release-builds')
 
 	return Promise.resolve({
-		appDirectory: path.join(outPath, 'Shooting-win32-x64'),
+		appDirectory: path.join(outPath, 'Reddot-win32-x64'),
 		authors: 'Maksim Morozov',
 		noMsi: true,
 		outputDirectory: path.join(rootPath, 'windows-installer'),
-		exe: 'Shooting.exe',
-		setupExe: 'ShootingSetup.exe'
+		exe: 'Reddot.exe',
+		setupExe: 'Reddot.exe'
 	})
 }

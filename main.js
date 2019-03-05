@@ -1,9 +1,19 @@
-const { app } = require('electron')
-const {BrowserWindow} = require('electron')
-const { Menu } = require('electron')
-const { MenuItem } = require('electron')
-const { ipcMain } = require('electron')
+const { 
+	app,
+	BrowserWindow,
+	Menu,
+	MenuItem,
+	ipcMain } = require('electron')
+const setupEvents = require('./installers/setupEvents')
+var path = require('path')
+
 const menu = new Menu()
+
+
+if (setupEvents.handleSquirrelEvent()) {
+    // squirrel event handled and app will exit in 1000ms, so don't do anything else
+    return;
+}
 
 
 function createWindow () {
