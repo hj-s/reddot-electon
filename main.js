@@ -5,7 +5,8 @@ const {
 	MenuItem,
 	ipcMain } = require('electron')
 const setupEvents = require('./installers/setupEvents')
-var path = require('path')
+const path = require('path')
+
 
 const menu = new Menu()
 
@@ -17,7 +18,14 @@ if (setupEvents.handleSquirrelEvent()) {
 
 
 function createWindow () {
-	let win = new BrowserWindow({ width: 800, height: 600+24, frame: false, resizable: false })
+	let win = new BrowserWindow({ 
+		width: 800, 
+		height: 600+24, 
+		frame: false, 
+		resizable: false,
+		icon: path.join(__dirname, 'icon/reddot.ico')
+	})
+
 	win.loadFile('index.html')
 
 	menu.append(new MenuItem({ 
