@@ -94,6 +94,12 @@ a {
 #title-bar-btns-left button:hover {
 	background-color: #3F3F41;
 }
+#title-bar-btns button:focus {
+	outline: none !important;
+}
+#title-bar-btns-left button:focus {
+	outline: none !important;
+}
 #title-bar-btns #close-btn:hover {
 	background-color: #ec2121 !important;
 }
@@ -110,3 +116,4 @@ a {
 #reddot { 
 	z-index: 3 
 }
+
