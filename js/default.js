@@ -17,7 +17,7 @@
 		});
 		
 		document.getElementById("max-btn").addEventListener("click", function (e) {
-			const window = remote.getCurrentWindow();file:///C:/Users/Maksim.Morozov/Documents/Electron/test/icon/close-square-button.svg
+			const window = remote.getCurrentWindow();
 			if (!window.isMaximized()) {
 				window.maximize();
 				this.blur()

@@ -6,123 +6,29 @@
 	<script src="js/default.js"></script>
 	<script src="js/reddot.js"></script>
 
-	<style type="text/css">
-
-		* { 
-			margin: 0;
-			padding: 0; 
-		}
-		body{
-			text-align: center;
-			margin: 0; 
-			height: 100%; 
-			overflow: hidden;
-			font-family: system, -apple-system, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-			background-color: white;
-
-		}
-		body:fullscreen {
-		    background-color: rgba(255,255,255,0);
-		}
-		body:-webkit-full-screen {
-		    background-color: rgba(255,255,255,0);
-		}
-		body:-moz-full-screen {
-		    background-color: rgba(255,255,255,0);
-		}
-		a {
-			color: #68217A;
-		}
-
-		.field { 
-			display: block;
-			position: absolute;
-			background-color: transparent;
-		}
-		.controls {
-			float: right;
-			visibility: hidden;
-		}
-
-		#title-bar {
-			-webkit-app-region: drag;
-			position: sticky;
-			top: 0px;
-			left: 0px;
-			height: 32px; 
-			padding: 0px;
-			margin: 0px; 
-			color: #fff;
-			background-color: #66d;
-			font-family: sans-serif;
-
-		}
-		#title {
-			position: fixed;
-			top: 0px;
-			left: 40px; 
-			line-height: 32px;
-			font-size: 14px;
-
-		}
-		#title-bar-btns {
-			-webkit-app-region: no-drag;
-			position: fixed;
-			top: 0px;
-			right: 0px; 
-		}
-		#title-bar-btns button {
-			height: 32px;
-			width: 32px;
-			background-color: transparent;
-			border: none;
-			color: #ADADAD;
-			font-size: 16px;
-		}
-		#title-bar-btns-left{
-			-webkit-app-region: no-drag;
-			position: fixed;
-			top: 0px;
-			left: 0px; 
-		}
-		#title-bar-btns-left button {
-			height: 32px;
-			width: 32px;
-			background-color: transparent;
-			border: none;
-			color: #ADADAD;
-			font-size: 16px;
-		}
-		#title-bar-btns-left button:hover {
-			background-color: #3F3F41;
-		}
-		#title-bar-btns button:hover {
-			background-color: #3F3F41;
-		}
-		#content {
-			padding-top: 12px; 
-			color: #CCCCCC;
-		}
-		#fov { z-index: 1 }
-		#maze { z-index: 2 }
-		#reddot { z-index: 3 }
-
-	</style>
+	<link rel="stylesheet" href="css/main.css">
 
 </head>
 <body onload="init();">
 	<div id="title-bar">
 		<div id="title-bar-btns-left">
-			<button id="menu-btn"><img src="icon/menu-square-button.svg" width="20px" height="20px"></button>
+			<button id="menu-btn">
+				<img class="button-image" src="icon/menu-square-button.svg" width="20px" height="20px">
+			</button>
 		</div>
 		<div id="title">
 			<span>Reddot</span>
 		</div>
 		<div id="title-bar-btns">
-			<button id="min-btn"><img src="icon/minus-squared-button.svg" width="20px" height="20px"></button>
-			<button style="display: none;" disabled="true" id="max-btn"><img src="icon/add-square-button.svg" width="20px" height="20px"></button>
-			<button id="close-btn"><img src="icon/close-square-button.svg" width="20px" height="20px"></button>
-			<!-- https://www.flaticon.com/packs/squared-ui -->
+			<button id="min-btn">
+				<img class="button-image" src="icon/minus-squared-button.svg" width="20px" height="20px">
+			</button>
+			<button style="display: none;" id="max-btn">
+				<img class="button-image" src="icon/add-square-button.svg" width="20px" height="20px">
+			</button>
+			<button id="close-btn">
+				<img class="button-image" src="icon/close-square-button.svg" width="20px" height="20px">
+			</button>
 		</div>
 	</div>
 	<div class="content">
