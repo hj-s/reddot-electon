@@ -924,7 +924,7 @@ var speed = 1
 		renderPath(ctx){
 			if (isDefined(this.path)){
 				if (this.path.length > 1){
-					ctx.strokeStyle = `purple`
+					ctx.strokeStyle = `#66d`
 					ctx.globalCompositeOperation = `source-over`
 					for( let i = 1; i < this.path.length; i++){ 
 						ctx.moveTo(this.path[i-1].x * this.d + this.d/2, this.path[i-1].y * this.d +  this.d/2)
