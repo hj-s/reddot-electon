@@ -37,6 +37,7 @@ a {
 
 }
 
+
 #title-bar {
 	-webkit-app-region: drag;
 	position: sticky;
@@ -46,7 +47,7 @@ a {
 	padding: 0px;
 	margin: 0px; 
 	color: #fff;
-	background-color: #66d;
+	background-color: #6666dd;
 	font-family: sans-serif;
 
 }
@@ -87,11 +88,14 @@ a {
 	color: #ADADAD;
 	font-size: 16px;
 }
+#title-bar-btns button:hover {
+	background-color: #3F3F41;
+}
 #title-bar-btns-left button:hover {
 	background-color: #3F3F41;
 }
-#title-bar-btns button:hover {
-	background-color: #3F3F41;
+#title-bar-btns #close-btn:hover {
+	background-color: #b71212 !important;
 }
 #content {
 	padding-top: 12px; 
