@@ -20,7 +20,7 @@ function getInstallerConfig () {
 		outputDirectory: path.join(rootPath, 'windows-installer'),
 		exe: 'Reddot.exe',
 		setupExe: 'Reddot.exe',
-		iconURL: 'https://raw.githubusercontent.com/hj-s/reddot-electon/master/icon/Reddot.ico',
+		iconUrl: 'https://raw.githubusercontent.com/hj-s/reddot-electon/master/icon/Reddot.ico',
 		setupIcon: path.join(rootPath, 'icon', 'Reddot.ico')
 	})
 }
