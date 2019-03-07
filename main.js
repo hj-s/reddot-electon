@@ -23,7 +23,7 @@ function createWindow () {
 		height: 600+24, 
 		frame: false, 
 		resizable: false,
-		icon: path.join(__dirname, 'icon/reddot.ico')
+		icon: path.join(__dirname, 'icon/Reddot.ico')
 	})
 
 	win.loadFile('index.html')

@@ -9,9 +9,7 @@ const sqfY = 30
 const sqfd = 20
 
 const cwidth = sqfX*sqfd
-console.log(cwidth)
 const cheight = sqfY*sqfd
-console.log(cheight)
 
 //global variables for objects
 var maze = undefined
@@ -214,11 +212,16 @@ var speed = 1
 		}
 		//handle fov checkbox
 		static handleFovCb(){
-			Global.drawFOVi =!Global.drawFOVi // event.target.checked
+			Global.drawFOVi =!Global.drawFOVi 
 		}
 		static createEvli(speed){
 			if (isDefined(maze)){
-				Global.evil = (new Evil()).copyFrom(maze.generatePoint(speed))
+				//Global.evil = (new Evil()).copyFrom(maze.generatePoint(speed))
+				Global.evil = []
+				for (let i = 0; i < 5; i++){
+					let evilTemp = (new Evil()).copyFrom(maze.generatePoint(speed))
+					Global.evil.push(evilTemp)
+				}
 			}
 		}
 		static handleMove(point, up, right, down, left){
